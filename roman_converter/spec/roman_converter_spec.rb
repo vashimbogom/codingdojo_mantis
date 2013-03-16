@@ -1,9 +1,9 @@
-require 'lib/roman_converter'
+require 'lib/romann_converter'
 
-describe RomanConverter do
+describe RomannConverter do
 
 	before (:each) do
-		@conv = RomanConverter.new
+		@conv = RomannConverter.new
 	end
 
 
@@ -100,6 +100,10 @@ describe RomanConverter do
 	it "should return CMLXXXVIII where number equals 988" do
 		romannumber = @conv.convert(988)
 		romannumber.should == 'CMLXXXVIII'
-	end
+        end
+    it "should return M where number equals 1000" do
+            romannumber = @conv.convert(1000)
+            romannumber.should == 'M'
+        end
 
 end
